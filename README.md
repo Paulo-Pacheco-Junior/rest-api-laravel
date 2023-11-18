@@ -8,11 +8,13 @@ Filtragem de Campos(fields) pela URL,
 Validação FormRequest,
 Endpoints de Users, Products e Auth(login, logout...)
 
-ROTAS PROTEGIDAS:
+// ROTAS PROTEGIDAS:
+
     Route::resource('/users', UserController::class);
     Route::resource('/products', ProductController::class)->except(['show']);
 
-ROTAS NÃO PROTEGIDAS:
+// ROTAS NÃO PROTEGIDAS:
+
     Route::post('/users', [UserController::class, 'store']);
 
     Route::get('/products', [ProductController::class, 'index']);
