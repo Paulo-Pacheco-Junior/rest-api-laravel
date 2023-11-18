@@ -1,12 +1,13 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Projeto Nível Iniciante/Intermediário 
+<h1>Projeto Nível Iniciante/Intermediário</h1> 
 
-CRUD feito com API REST
-Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),
-Filtragem de Campos(fields) pela URL,
-Validação FormRequest,
-Endpoints de Users, Products e Auth(login, logout...)
+<ul>CRUD feito com API REST
+    <li>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),</li>
+    <li>Filtragem de Campos(fields) pela URL,</li>
+    <li>Validação FormRequest,</li>
+    <li>Endpoints de Users, Products e Auth(login, logout...)</li>
+</ul>
 
 // ROTAS PROTEGIDAS:
 
