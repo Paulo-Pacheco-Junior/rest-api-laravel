@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
  
 <h1>CRUD feito com API REST<h1>
-<h2>Projeto Nível Iniciante/Intermediário</h2>
+<h3>Projeto Nível Iniciante/Intermediário</h3>
 <ul>
     <li>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),</li>
     <li>Filtragem de Campos(fields) pela URL,</li>
@@ -11,11 +11,13 @@
 
 
 // ROTAS PROTEGIDAS:
+
     Route::resource('/users', UserController::class);
     Route::resource('/products', ProductController::class)->except(['show']);
 
 
 // ROTAS NÃO PROTEGIDAS:
+
     Route::post('/users', [UserController::class, 'store']);
 
     Route::get('/products', [ProductController::class, 'index']);
