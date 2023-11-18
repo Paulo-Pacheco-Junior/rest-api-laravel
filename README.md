@@ -29,3 +29,51 @@ ROTAS NÃO PROTEGIDAS:
 actions(Index, Show, Store) de /products... 
 
 action(Store) de /users
+
+
+
+## Instalação
+
+Clone o projeto:
+
+```
+git clone «URL DO REPOSITÓRIO»
+```
+
+Uma vez clonado, abra na pasta do projeto:
+
+```
+cd «DIR DO PROJETO»
+```
+
+Dentro da pasta do projeto, copie o arquivo *.env.example* para *.env*.
+Agora, modifique o .env insirindo insira as credenciais do seu banco de dados.
+
+```
+DB_CONNECTION=mysql
+DB_HOST=«ENDEREÇO DO SEU BANCO DE DADOS»
+DB_PORT=3306
+DB_DATABASE=«NOME DO SEU BANCO DE DADOS»
+DB_USERNAME=«USUÁRIO DO SEU BANCO DE DADOS»
+DB_PASSWORD=«SENHA PARA O USUÁRIO»
+```
+
+Por exemplo:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=beerandcode
+DB_USERNAME=dba
+DB_PASSWORD=senha1234
+```
+
+Agora, instale o projeto:
+
+```
+composer install
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
+
