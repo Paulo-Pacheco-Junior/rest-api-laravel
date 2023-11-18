@@ -9,13 +9,13 @@
     <li>Endpoints de Users, Products e Auth(login, logout...)</li>
 </ul>
 
-// ROTAS PROTEGIDAS:
 
+// ROTAS PROTEGIDAS:
     Route::resource('/users', UserController::class);
     Route::resource('/products', ProductController::class)->except(['show']);
 
-// ROTAS NÃO PROTEGIDAS:
 
+// ROTAS NÃO PROTEGIDAS:
     Route::post('/users', [UserController::class, 'store']);
 
     Route::get('/products', [ProductController::class, 'index']);
