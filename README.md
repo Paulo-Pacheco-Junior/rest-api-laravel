@@ -3,34 +3,26 @@
 Projeto Nível Iniciante/Intermediário 
 
 CRUD feito com API REST
-
-Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth)
-
+Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),
 Filtragem de Campos(fields) pela URL,
-
-2 formas de Validações( Validator e FormRequest)
-
-e Endpoints de Users, Products e Auth(login, logout...)
+Validação FormRequest,
+Endpoints de Users, Products e Auth(login, logout...)
 
 CONTROLLERS:
-
-UserController
-ProductController
-AuthController
+    UserController
+    ProductController
+    AuthController
 
 ROTAS PROTEGIDAS:
-
-actions(Update, Patch e Delete) de /products...
-
-actions(Index, Show, Update, Patch e Delete) de /users...
+    Route::resource('/users', UserController::class);
+    Route::resource('/products', ProductController::class)->except(['show']);
 
 ROTAS NÃO PROTEGIDAS:
+    Route::post('/users', [UserController::class, 'store']);
 
-actions(Index, Show, Store) de /products... 
-
-action(Store) de /users
-
-
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::post('/products', [ProductController::class, 'store']);
+    Route::get('/products/{id}', [ProductController::class, 'show']);
 
 ## Instalação
 
