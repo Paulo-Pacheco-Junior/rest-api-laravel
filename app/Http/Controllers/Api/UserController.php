@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 
 class UserController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index(Request $request) {
 
         $users = User::query();
@@ -17,28 +20,12 @@ class UserController extends Controller
         
     }
 
-    public function show($id) {
-        
-        $user = User::find($id);
-
-        return response()->json($user);
-
-    }
-
-    public function store(Request $request) {
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(UserRequest $request) {
 
         $data = $request->all();
-
-        $validator = Validator::make($data, [
-
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'password' => 'required|min:8'
-        ]);
-
-        if($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        };
 
         $user = new User;
         $user->fill($data);
@@ -51,22 +38,23 @@ class UserController extends Controller
 
     }
 
-    public function update(Request $request, $id) {
+    /**
+     * Display the specified resource.
+     */
+    public function show($id) {
+        
+        $user = User::find($id);
 
-        $data = $request->all();
+        return response()->json($user);
 
-        //VALIDACAO CUSTOMIZADA (Nesse caso substituiu o FormRequest:ProductRequest)
-        //
-        $validator = Validator::make($data, [
+    }
 
-            'name' => 'string|max:255',
-            'email' => 'email|max:255',
-            'password' => 'min:8|confirmed'
-        ]);
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(UserRequest $request, $id) {
 
-        if($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        };
+        $data = $request->only(['name','email','password']);
 
         $user = User::find($id);
 
@@ -83,49 +71,22 @@ class UserController extends Controller
 
     } 
 
-    public function patch(Request $request, $id) {
-
-        $data = $request->only(['name','email','password']);
-
-        $validator = Validator::make($data, [
-
-            'name' => 'string|max:255',
-            'email' => 'email|max:255',
-            'password' => 'min:8|confirmed'
-        ]);
-
-        if($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        };
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($id) {
 
         $user = User::find($id);
-
-        if (!$user) {
-            return response()->json(['error' => 'Usuário não encontrado'], 404);
-        }
-
-        $user->update($data);
-
-        return response()->json([
-            'msg' => 'Usuário alterado com sucesso',
-            'data' => $user
-        ]);
-
-    } 
-
-    public function delete($id) {
-
-       $user = User::find($id);
-
-        if(!$user) {
-            return response()->json(['error' => 'Usuário não encontrado'], 404);
-        };
-
-        $user->delete();
-
-        return response()->json(
-            ['msg' => 'Usuário removido com sucesso!']
-        );
-
-    }
+ 
+         if(!$user) {
+             return response()->json(['error' => 'Usuário não encontrado'], 404);
+         };
+ 
+         $user->delete();
+ 
+         return response()->json(
+             ['msg' => 'Usuário removido com sucesso!']
+         );
+ 
+     }
 }

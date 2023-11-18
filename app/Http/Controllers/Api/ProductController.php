@@ -3,14 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
+
+
 class ProductController extends Controller
 {
-    
+    /**
+     * Display a listing of the resource.
+     */
     public function index(Request $request) {
 
         $products = Product::query();
@@ -24,30 +27,12 @@ class ProductController extends Controller
         
     }
 
-    public function show($id) {
-        
-        $product = Product::find($id);
-
-        return response()->json($product);
-
-    }
-
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(ProductRequest $request) {
 
         $data = $request->all();
-
-        //VALIDACAO CUSTOMIZADA (Substituída pelo FormRequest:ProductRequest)
-        
-        // $validator = Validator::make($data, [
-        //     'title' => 'required|string|max:255',
-        //     'url' => 'required|string|max:255',
-        //     'price' => 'required|numeric',
-        //     'description' => 'required|string'
-        // ]);
-
-        // if($validator->fails()) {
-        //     return response()->json(['error' => $validator->errors()], 400);
-        // };
 
         $product = new Product;
         $product->fill($data);
@@ -60,23 +45,23 @@ class ProductController extends Controller
 
     }
 
-    public function update(Request $request, $id) {
+    /**
+     * Display the specified resource.
+     */
+    public function show($id) {
+        
+        $product = Product::find($id);
 
-        $data = $request->all();
+        return response()->json($product);
 
-        //VALIDACAO CUSTOMIZADA (Nesse caso substituiu o FormRequest:ProductRequest)
-        //
-        $validator = Validator::make($data, [
+    }
 
-            'title' => 'string|max:255',
-            'url' => 'string|max:255',
-            'price' => 'numeric',
-            'description' => 'string'
-        ]);
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(ProductRequest $request, $id) {
 
-        if($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        };
+        $data = $request->only(['title','url','price','description']);
 
         $product = Product::find($id);
 
@@ -93,37 +78,10 @@ class ProductController extends Controller
 
     } 
 
-    public function patch(Request $request, $id) {
-
-        $data = $request->only(['title','url','price','description']);
-
-        $validator = Validator::make($data, [
-            'title' => 'string|max:255',
-            'url' => 'string|max:255',
-            'price' => 'numeric',
-            'description' => 'string'
-        ]);
-
-        if($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        }
-
-        $product = Product::find($id);
-
-        if (!$product) {
-            return response()->json(['error' => 'Produto não encontrado'], 404);
-        }
-
-        $product->update($data);
-
-        return response()->json([
-            'msg' => 'Produto alterado com sucesso',
-            'data' => $product
-        ]);
-
-    } 
-
-    public function delete($id) {
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($id) {
 
         $product = Product::find($id);
 
@@ -136,7 +94,6 @@ class ProductController extends Controller
         return response()->json(
             ['msg' => 'Produto removido com sucesso!']
         );
-
+        
     }
-
 }
