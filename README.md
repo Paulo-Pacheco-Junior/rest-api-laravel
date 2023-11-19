@@ -28,7 +28,7 @@ ___________________________
 
 <strong>Explicando o Projeto</strong>
 
-Vamos definir a URL base http://127.0.0.1:8000(a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente) 
+Vamos definir a URL base http://127.0.0.1:8000 (a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente) 
 Todas as Requisições HTTP que irão interagir com os recursos da API utilizarão a combinação da URL base + Endpoint (Essa combinação se chama URI)
 Se combinarmos a URL base  http://127.0.0.1:8000 e o endpoint <strong>/api/products</strong> 
 formaremos a URI http://127.0.0.1:8000/api/products 
