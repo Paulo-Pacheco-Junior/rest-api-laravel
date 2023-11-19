@@ -11,6 +11,7 @@
 </ul>
 ___________________________
 
+
 <strong>Explicando o Projeto</strong>
 
 Vamos definir a <strong>URL base</strong> http://127.0.0.1:8000 (a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente)</br> 
@@ -40,7 +41,7 @@ Irão aparecer 10 Produtos logo abaixo com as chaves:
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
     <li>Criação da Factory ProductFactory</li>
-    <li>Criaçao do Seeder ProductSeeder</li>
+    <li>Criaçao do Seeder ProductsTableSeeder</li>
     <li>Execução do DatabaseSeeder</li>     
 </ul>
  
