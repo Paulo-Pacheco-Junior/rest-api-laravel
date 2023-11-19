@@ -40,7 +40,7 @@ No Postman:
 
 → Faça uma Requisição com o verbo GET e Endpoint <strong>/api/products</strong>
 
-Irão aparecer 10 produtos logo abaixo com os índices:
+Irão aparecer 10 produtos logo abaixo com as chaves:
 <ul>
     <li>'id'</li>
     <li>'title'</li>
@@ -51,7 +51,7 @@ Irão aparecer 10 produtos logo abaixo com os índices:
     <li>'updated_at'</li>
 </ul>
 
-Estes produtos tiveram seus Índices Populados em Massa através da: 
+Estes produtos foram Populados em Massa através da: 
 <ul>
     <li>Criação da Factory ProductFactory</li>
     <li>Criaçao do Seeder ProductSeeder</li>
@@ -67,7 +67,7 @@ Seeder = Semeador
 
 <strong>Factories:</strong>
 
-Na Factory relacionamos cada índice do Produto com um faker(). Esse faker() tem vários formatos disponíveis na Biblioteca PHP Faker do GitHub https://github.com/fzaninotto/Faker
+Na Factory relacionamos cada chave do Produto com um faker(). Esse faker() é usado para criar valores fictícios. Podemos escolher vários formatos de faker() disponíveis na Biblioteca PHP Faker do GitHub https://github.com/fzaninotto/Faker
 
 Exemplo:
 ‘url’ => fake()→url()
@@ -77,7 +77,8 @@ Tecnicamente, ela define como criar Instâncias da Classe Products
 
 <strong>Seeders:</strong>
 
-No Seeder nós semeamos/populamos o Banco de Dados com dados fictícios definidos na Factory Nesse Projeto eu decidi popular 15 Instâncias/registros conforme o trecho de código abaixo:
+No Seeder nós semeamos/populamos o Banco de Dados com dados fictícios definidos na Factory
+Nesse Projeto eu decidi popular 15 Instâncias/registros conforme o trecho de código abaixo:
 
 Product::factory(15)→create();
 
