@@ -21,13 +21,13 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
 </br>
 
 <strong>Então vamos à Prática!</strong>
-array[
-'1 -> Abra o Postman e Digite a Base URL',
-'Base URL = http://127.0.0.1:8000',
-'2 -> Selecione o Verbo/Método(GET,POST,PUT,DELETE)',
-'3 -> Acrescente o Endpoint',
-'4 -> Clique em Send/Enviar'
-]
+
+1 -> Abra o Postman e Digite a Base URL,</br>
+Base URL = http://127.0.0.1:8000,</br>
+2 -> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</br>
+3 -> Acrescente o Endpoint,</br>
+4 -> Clique em Send/Enviar</br>
+
 
 
 
