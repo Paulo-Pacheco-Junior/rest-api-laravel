@@ -11,7 +11,7 @@
 </ul>
 ___________________________
 
-## ROTAS PROTEGIDAS:
+<strong>ROTAS NÃO PROTEGIDAS:</strong>
 
     Route::resource('/users', UserController::class);
     Route::resource('/products', ProductController::class)->except(['show']);
@@ -26,7 +26,7 @@ ___________________________
     Route::get('/products/{id}', [ProductController::class, 'show']);
     
 
-## COMO FUNCIONA
+<strong>Como Funciona</strong>
 
 Vamos definir a URL base http://127.0.0.1:8000(a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente) 
 Todas as Requisições HTTP que irão interagir com os recursos da API utilizarão a combinação da URL base + Endpoint (Essa combinação se chama URI)
@@ -34,7 +34,7 @@ Se combinarmos a URL base  http://127.0.0.1:8000 e o endpoint <strong>/api/produ
 formaremos a URI http://127.0.0.1:8000/api/products 
 Agora que deixei claro que não desconheço os termos técnicos. Para simplificar as explicações, sempre que formos fazer requisições irei mencionar apenas o Endpoint.   
 
-## Então vamos à Prática!
+<strong>Então vamos à Prática!</strong>
 
 No Postman:
 
@@ -51,14 +51,14 @@ Estes produtos tiveram seus Índices Populados em Massa através da:
     <li>Execução do DatabaseSeeder</li>     
 </ul>
  
-## Como isso Funciona?
+<strong>Como isso Funciona?</strong>
 
 Simples! Como o próprio nome diz: 
 
 Factory = Fábrica</br>
 Seeder = Semeador 
 
-## FACTORIES:
+<strong>FACTORIES:</strong>
 
 Na Factory relacionamos cada Chave do Produto com um faker(). Esse faker() tem vários formatos disponíveis na Biblioteca PHP Faker do GitHub https://github.com/fzaninotto/Faker
 
@@ -68,13 +68,13 @@ Exemplo:
 A Factory faz apenas isso. Só define o Formato que será construído. 
 Tecnicamente, ela define como criar Instâncias da Classe Products
 
-## SEEDERS:
+<strong>## SEEDERS:</strong>
 
 No Seeder nós semeamos/populamos o Banco de Dados com dados fictícios definidos na Factory Nesse Projeto eu decidi popular 15 Instâncias/registros conforme o trecho de código abaixo:
 
 Product::factory(15)→create();
 
-## DATABASE SEEDER:
+<strong>DATABASE SEEDER:</strong>
 
 O DatabaseSeeder é responsável por reunir todos os Seeders do Projeto e executá-los em sequência na ordem de cima para baixo. Se um Seeder depende de outro ele deve estar abaixo do que ele depende para ser executado depois.
 
