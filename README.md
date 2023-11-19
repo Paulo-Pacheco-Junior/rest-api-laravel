@@ -9,8 +9,7 @@
     <li>Filtragem de Campos(fields) pela URL,</li>
     <li>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),</li>
 </ul>
-___________________________
-
+</br>
 
 <strong>Explicando o Projeto</strong>
 
@@ -19,7 +18,7 @@ Todas as <strong>Requisições HTTP</strong> que irão interagir com os recursos
 Se combinarmos a <strong>URL base</strong> http://127.0.0.1:8000 e o <strong>endpoint /api/products</strong></br> 
 formaremos a <strong>URI</strong> http://127.0.0.1:8000/api/products</br> 
 Agora que deixei claro que não desconheço os termos técnicos. Para simplificar as explicações, sempre que formos fazer requisições irei mencionar apenas o <strong>Endpoint</strong>   
-
+</br>
 
 <strong>Então vamos à Prática!</strong>
 
