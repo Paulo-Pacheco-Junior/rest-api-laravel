@@ -3,28 +3,13 @@
 <h2>CRUD feito com API REST<h2>
 <h3>Projeto Nível Iniciante / Intermediário</h3>
 <ul>
-    <li>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),</li>
     <li>Database seeding</li>
-    <li>Filtragem de Campos(fields) pela URL,</li>
-    <li>Validação FormRequest,</li>
     <li>Endpoints de Users, Products e Auth(login, logout...)</li>
+    <li>Validação FormRequest,</li>
+    <li>Filtragem de Campos(fields) pela URL,</li>
+    <li>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),</li>
 </ul>
 ___________________________
-
-<strong>Rotas Protegidas:</strong>
-
-    Route::resource('/users', UserController::class);
-    Route::resource('/products', ProductController::class)->except(['show']);
-
-
-<strong>Rotas Não Protegidas:</strong>
-
-    Route::post('/users', [UserController::class, 'store']);
-
-    Route::get('/products', [ProductController::class, 'index']);
-    Route::post('/products', [ProductController::class, 'store']);
-    Route::get('/products/{id}', [ProductController::class, 'show']);
-    
 
 <strong>Explicando o Projeto</strong>
 
@@ -41,7 +26,7 @@ No Postman:
 
 → Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong>
 
-Irão aparecer 10 produtos logo abaixo com as chaves:
+Irão aparecer 10 Produtos logo abaixo com as chaves:
 <ul>
     <li>'id'</li>
     <li>'title'</li>
@@ -52,7 +37,7 @@ Irão aparecer 10 produtos logo abaixo com as chaves:
     <li>'updated_at'</li>
 </ul>
 
-Estes produtos foram Populados em Massa através da: 
+Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
     <li>Criação da Factory ProductFactory</li>
     <li>Criaçao do Seeder ProductSeeder</li>
@@ -91,6 +76,20 @@ Isso significa que quando o DatabaseSeeder for executado teremos vários Produto
 
 
 <h3>[EM DESENVOLVIMENTO! CONTINUAÇÃO EM BREVE]</h3>
+
+<strong>Rotas Protegidas:</strong>
+
+    Route::resource('/users', UserController::class);
+    Route::resource('/products', ProductController::class)->except(['show']);
+
+
+<strong>Rotas Não Protegidas:</strong>
+
+    Route::post('/users', [UserController::class, 'store']);
+
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::post('/products', [ProductController::class, 'store']);
+    Route::get('/products/{id}', [ProductController::class, 'show']);
     
 
 ## Instalação
