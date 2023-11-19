@@ -29,10 +29,10 @@ ___________________________
 <strong>Explicando o Projeto</strong>
 
 Vamos definir a <strong>URL base</strong> http://127.0.0.1:8000 (a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente)</br> 
-Todas as Requisições <strong>HTTP</strong> que irão interagir com os recursos da API utilizarão a combinação da <strong>URL base + Endpoint</strong> (Essa combinação se chama <strong>URI</strong>)</br>
+Todas as <strong>Requisições HTTP</strong> que irão interagir com os recursos da API utilizarão a combinação da <strong>URL base + Endpoint</strong> (Essa combinação se chama <strong>URI</strong>)</br>
 Se combinarmos a <strong>URL base</strong> http://127.0.0.1:8000 e o <strong>endpoint /api/products</strong></br> 
 formaremos a <strong>URI</strong> http://127.0.0.1:8000/api/products</br> 
-Agora que deixei claro que não desconheço os termos técnicos. Para simplificar as explicações, sempre que formos fazer requisições irei mencionar apenas o Endpoint.   
+Agora que deixei claro que não desconheço os termos técnicos. Para simplificar as explicações, sempre que formos fazer requisições irei mencionar apenas o <strong>Endpoint</strong>   
 
 <strong>Então vamos à Prática!</strong>
 
