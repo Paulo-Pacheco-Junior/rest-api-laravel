@@ -17,7 +17,7 @@ ___________________________
     Route::resource('/products', ProductController::class)->except(['show']);
 
 
-## ROTAS NÃO PROTEGIDAS:
+<strong>ROTAS NÃO PROTEGIDAS:</strong>
 
     Route::post('/users', [UserController::class, 'store']);
 
