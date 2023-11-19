@@ -28,7 +28,7 @@ Base URL = http://127.0.0.1:8000,</br>
 3 -> Acrescente o Endpoint,</br>
 4 -> Clique em Send/Enviar</br>
 
-'REQUISICOES DE PRODUTOS'=> [
+                'REQUISICOES DE PRODUTOS'=> [
                     ['Exibir Todos os Produtos' => ['Verbo: GET', 'Endpoint: /api/products']],
                     ['Criar um Novo Produto' => ['Verbo: POST', 'Endpoint: /api/products']],
                     ['Exibir Apenas um Produto' => ['Verbo: GET', 'Endpoint: /api/products/{id}']],
