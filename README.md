@@ -34,6 +34,7 @@ Se combinarmos a <strong>URL base</strong> http://127.0.0.1:8000 e o <strong>end
 formaremos a <strong>URI</strong> http://127.0.0.1:8000/api/products</br> 
 Agora que deixei claro que não desconheço os termos técnicos. Para simplificar as explicações, sempre que formos fazer requisições irei mencionar apenas o <strong>Endpoint</strong>   
 
+
 <strong>Então vamos à Prática!</strong>
 
 No Postman:
