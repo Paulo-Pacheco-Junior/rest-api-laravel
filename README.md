@@ -28,29 +28,26 @@ Base URL = http://127.0.0.1:8000,</br>
 3 -> Acrescente o Endpoint,</br>
 4 -> Clique em Send/Enviar</br>
 
-REQUISICOES DE PRODUTOS'=> 
-                    ['Exibir Todos os Produtos' => ['Verbo: GET', 'Endpoint: /api/products']],
-                    ['Criar um Novo Produto' => ['Verbo: POST', 'Endpoint: /api/products']],
-                    ['Exibir Apenas um Produto' => ['Verbo: GET', 'Endpoint: /api/products/{id}']],
-                    ['Atualizar um Produto' => ['Verbo: PUT', 'Endpoint: /api/products/{id}']],
-                    ['Deletar um Produto' => ['Verbo: DELETE', 'Endpoint: /api/products/{id}']]
-                
-                'REQUISICOES DE USUARIOS'=> [
-                    ['Exibir Todos os Usuários' => ['Verbo: GET', 'Endpoint: /api/users']],
-                    ['Criar um Novo Usuário' => ['Verbo: POST', 'Endpoint: /api/users']],
-                    ['Exibir Apenas um Usuário' => ['Verbo: GET', 'Endpoint: /api/users/{id}']],
-                    ['Atualizar um Usuário' => ['Verbo: PUT', 'Endpoint: /api/users/{id}']],
-                    ['Deletar um Usuário' => ['Verbo: DELETE', 'Endpoint: /api/users/{id}']]
+['REQUISICOES DE PRODUTOS'=> [
+    ['Exibir Todos os Produtos' => ['Verbo: GET', 'Endpoint: /api/products']],
+    ['Criar um Novo Produto' => ['Verbo: POST', 'Endpoint: /api/products']],
+    ['Exibir Apenas um Produto' => ['Verbo: GET', 'Endpoint: /api/products/{id}']],
+    ['Atualizar um Produto' => ['Verbo: PUT', 'Endpoint: /api/products/{id}']],
+    ['Deletar um Produto' => ['Verbo: DELETE', 'Endpoint: /api/products/{id}']]
                 ],
-                'REQUISICOES DE AUTENTICACAO'=> [
-                    ['Entrar na conta do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/login']],
-                    ['Sair da Conta do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/logout']],
-                    ['Atualizar o Token de Acesso do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/refresh']],
-                    ['Mostrar Dados do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/me']]
+'REQUISICOES DE USUARIOS'=> [
+    ['Exibir Todos os Usuários' => ['Verbo: GET', 'Endpoint: /api/users']],
+    ['Criar um Novo Usuário' => ['Verbo: POST', 'Endpoint: /api/users']],
+    ['Exibir Apenas um Usuário' => ['Verbo: GET', 'Endpoint: /api/users/{id}']],
+    ['Atualizar um Usuário' => ['Verbo: PUT', 'Endpoint: /api/users/{id}']],
+    ['Deletar um Usuário' => ['Verbo: DELETE', 'Endpoint: /api/users/{id}']]
                 ],
-
-
-
+'REQUISICOES DE AUTENTICACAO'=> [
+    ['Entrar na conta do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/login']],
+    ['Sair da Conta do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/logout']],
+    ['Atualizar o Token de Acesso do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/refresh']],
+    ['Mostrar Dados do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/me']]
+],
 
 
 _______________________________________________________________________________
