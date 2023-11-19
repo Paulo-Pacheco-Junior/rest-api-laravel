@@ -89,7 +89,7 @@ O DatabaseSeeder é responsável por reunir todos os Seeders do Projeto e execut
 Isso significa que quando o DatabaseSeeder for executado teremos vários Produtos Fictícios que serão fundamentais para testarmos o Projeto
 
 
-[EM DESENVOLVIMENTO! CONTINUAÇÃO EM BREVE]
+<h3>[EM DESENVOLVIMENTO! CONTINUAÇÃO EM BREVE]</h3>
     
 
 ## Instalação
