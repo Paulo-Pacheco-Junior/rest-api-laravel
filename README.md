@@ -65,7 +65,7 @@ Simples! Como o próprio nome diz:
 Factory = Fábrica</br>
 Seeder = Semeador 
 
-<strong>FACTORIES:</strong>
+<strong>Factories:</strong>
 
 Na Factory relacionamos cada Chave do Produto com um faker(). Esse faker() tem vários formatos disponíveis na Biblioteca PHP Faker do GitHub https://github.com/fzaninotto/Faker
 
@@ -75,13 +75,13 @@ Exemplo:
 A Factory faz apenas isso. Só define o Formato que será construído. 
 Tecnicamente, ela define como criar Instâncias da Classe Products
 
-<strong>## SEEDERS:</strong>
+<strong>Seeders:</strong>
 
 No Seeder nós semeamos/populamos o Banco de Dados com dados fictícios definidos na Factory Nesse Projeto eu decidi popular 15 Instâncias/registros conforme o trecho de código abaixo:
 
 Product::factory(15)→create();
 
-<strong>DATABASE SEEDER:</strong>
+<strong>Database Seeder:</strong>
 
 O DatabaseSeeder é responsável por reunir todos os Seeders do Projeto e executá-los em sequência na ordem de cima para baixo. Se um Seeder depende de outro ele deve estar abaixo do que ele depende para ser executado depois.
 
