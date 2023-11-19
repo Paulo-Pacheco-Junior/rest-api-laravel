@@ -11,13 +11,13 @@
 </ul>
 ___________________________
 
-<strong>ROTAS NÃO PROTEGIDAS:</strong>
+<strong>Rotas Protegidas:</strong>
 
     Route::resource('/users', UserController::class);
     Route::resource('/products', ProductController::class)->except(['show']);
 
 
-<strong>ROTAS NÃO PROTEGIDAS:</strong>
+<strong>Rotas Não Protegidas:</strong>
 
     Route::post('/users', [UserController::class, 'store']);
 
@@ -26,7 +26,7 @@ ___________________________
     Route::get('/products/{id}', [ProductController::class, 'show']);
     
 
-<strong>Como Funciona</strong>
+<strong>Explicando o Projeto</strong>
 
 Vamos definir a URL base http://127.0.0.1:8000(a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente) 
 Todas as Requisições HTTP que irão interagir com os recursos da API utilizarão a combinação da URL base + Endpoint (Essa combinação se chama URI)
@@ -41,8 +41,15 @@ No Postman:
 → Faça uma Requisição com o verbo GET e Endpoint <strong>/api/products</strong>
 
 Irão aparecer 10 produtos logo abaixo com as chaves:
-
-‘id’, ‘title’, ‘url’, ‘price’, ‘description’, ’created_at’, ’updated_at’
+<ul>
+    <li>'id'</li>
+    <li>'title'</li>
+    <li>'url'</li>
+    <li>'price'</li>
+    <li>'description'</li>
+    <li>'created_at'</li>
+    <li>'updated_at'</li>
+</ul>
 
 Estes produtos tiveram seus Índices Populados em Massa através da: 
 <ul>
