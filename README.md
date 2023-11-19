@@ -45,14 +45,16 @@ Irão aparecer 10 produtos logo abaixo com as chaves:
 ‘id’, ‘title’, ‘url’, ‘price’, ‘description’, ’created_at’, ’updated_at’
 
 Estes produtos tiveram seus Índices Populados em Massa através da: 
-
-→ Criação da Factory ProductFactory 
-→ Criaçao do Seeder ProductSeeder
-→ Execução do DatabaseSeeder 
+<ul>
+    <li>→ Criação da Factory ProductFactory</li>
+    <li>→ Criaçao do Seeder ProductSeeder</li>
+    <li>→ Execução do DatabaseSeeder</li>     
+</ul>
  
 Como isso Funciona?
 
 Simples! Como o próprio nome diz: 
+
 Factory = Fábrica
 Seeder = Semeador 
 
