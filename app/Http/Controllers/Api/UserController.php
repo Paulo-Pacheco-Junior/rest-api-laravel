@@ -16,7 +16,7 @@ class UserController extends Controller
 
         $users = User::query();
 
-        return response()->json($users->paginate(3)); 
+        return response()->json($users->paginate(10)); 
         
     }
 

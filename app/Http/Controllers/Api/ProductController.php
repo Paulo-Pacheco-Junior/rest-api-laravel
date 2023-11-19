@@ -23,7 +23,7 @@ class ProductController extends Controller
             $products = Product::selectRaw($fields);   
         }
 
-        return response()->json($products->paginate(3)); 
+        return response()->json($products->paginate(10)); 
         
     }
 

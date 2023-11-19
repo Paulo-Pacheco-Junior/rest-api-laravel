@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ApiHttpGuideController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\AuthController;
@@ -36,6 +37,9 @@ Route::group([
 
 });
 
+//Rota Raíz com o Guia de Requisições HTTP 
+Route::get('/', ApiHttpGuideController::class);
+
 Route::middleware('auth:api')->group(function () {
     // Rotas protegidas
     Route::resource('/users', UserController::class);
@@ -48,3 +52,6 @@ Route::post('/users', [UserController::class, 'store']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/products', [ProductController::class, 'store']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
+
+
+
