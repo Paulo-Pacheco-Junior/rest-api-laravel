@@ -38,7 +38,7 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
 
 No Postman:
 
-→ Faça uma Requisição com o verbo GET e Endpoint <strong>/api/products</strong>
+→ Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong>
 
 Irão aparecer 10 produtos logo abaixo com as chaves:
 <ul>
@@ -77,7 +77,7 @@ Tecnicamente, ela define como criar Instâncias da Classe Products
 
 <strong>Seeders:</strong>
 
-No Seeder nós semeamos/populamos o Banco de Dados com dados fictícios definidos na Factory
+No Seeder nós semeamos/populamos o Banco de Dados com dados fictícios definidos na Factory</br>
 Nesse Projeto eu decidi popular 15 Instâncias/registros conforme o trecho de código abaixo:
 
 Product::factory(15)→create();
