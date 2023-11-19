@@ -30,7 +30,7 @@ COMO FUNCIONA
 
 Vamos definir a URL base http://127.0.0.1:8000(a porta 8000, ou host 127.0.0.1 podem ser diferentes conforme a configuração do seu ambiente) 
 Todas as Requisições HTTP que irão interagir com os recursos da API utilizarão a combinação da URL base + Endpoint (Essa combinação se chama URI)
-Se combinarmos a URL base  http://127.0.0.1:8000 e o endpoint /api/products 
+Se combinarmos a URL base  http://127.0.0.1:8000 e o endpoint <strong>/api/products</strong> 
 formaremos a URI http://127.0.0.1:8000/api/products 
 Agora que deixei claro que não desconheço os termos técnicos. Para simplificar as explicações, sempre que formos fazer requisições irei mencionar apenas o Endpoint.   
 
@@ -38,7 +38,7 @@ Então vamos à Prática!
 
 No Postman:
 
-→ Faça uma Requisição com o verbo GET e Endpoint /api/products
+→ Faça uma Requisição com o verbo GET e Endpoint <strong>/api/products</strong>
 
 Irão aparecer 10 produtos logo abaixo com as chaves:
 
@@ -46,16 +46,16 @@ Irão aparecer 10 produtos logo abaixo com as chaves:
 
 Estes produtos tiveram seus Índices Populados em Massa através da: 
 <ul>
-    <li>→ Criação da Factory ProductFactory</li>
-    <li>→ Criaçao do Seeder ProductSeeder</li>
-    <li>→ Execução do DatabaseSeeder</li>     
+    <li>Criação da Factory ProductFactory</li>
+    <li>Criaçao do Seeder ProductSeeder</li>
+    <li>Execução do DatabaseSeeder</li>     
 </ul>
  
 Como isso Funciona?
 
 Simples! Como o próprio nome diz: 
 
-Factory = Fábrica
+Factory = Fábrica</br>
 Seeder = Semeador 
 
 FACTORIES:
