@@ -40,7 +40,7 @@ No Postman:
 
 → Faça uma Requisição com o verbo GET e Endpoint <strong>/api/products</strong>
 
-Irão aparecer 10 produtos logo abaixo com as chaves:
+Irão aparecer 10 produtos logo abaixo com os índices:
 <ul>
     <li>'id'</li>
     <li>'title'</li>
@@ -67,7 +67,7 @@ Seeder = Semeador
 
 <strong>Factories:</strong>
 
-Na Factory relacionamos cada Chave do Produto com um faker(). Esse faker() tem vários formatos disponíveis na Biblioteca PHP Faker do GitHub https://github.com/fzaninotto/Faker
+Na Factory relacionamos cada índice do Produto com um faker(). Esse faker() tem vários formatos disponíveis na Biblioteca PHP Faker do GitHub https://github.com/fzaninotto/Faker
 
 Exemplo:
 ‘url’ => fake()→url()
@@ -132,7 +132,7 @@ Agora, instale o projeto:
 ```
 composer install
 php artisan key:generate
-php artisan migrate
+php artisan migrate --seed
 php artisan serve
 ```
 
