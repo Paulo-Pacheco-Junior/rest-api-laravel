@@ -69,11 +69,11 @@ Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 </ul>
 
 <strong>Para Criar um Novo Produto:</strong>
-<ul>
-<li>→ Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)</li>
-<li>→ Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’</li>
-<li>→ Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você quiser</li>
-</ul>
+<ol>
+<li> Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)</li>
+<li> Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’</li>
+<li> Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você quiser</li>
+</ol>
 Por exemplo:
 <ul>
 <li>title:Teste</li>
@@ -81,7 +81,7 @@ Por exemplo:
 <li>price:100.00 (Para fração não usa ',', usa '.')</li>
 <li>description:Meu primeiro teste</li>
 </ul>
-→ Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong>
+→ Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
