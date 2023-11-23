@@ -68,7 +68,7 @@ Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
     <li>'created_at'</li>
     <li>'updated_at'</li>
 </ul>
-</br></br>
+</br>
 
 <strong>Para Criar um Novo Produto:</strong>
 <ol>
@@ -84,7 +84,7 @@ Por exemplo:
     <li>description: Meu primeiro teste</li>
 </ul>
 4. Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
-</br></br>
+</br>
 
 <strong>Para Exibir Apenas um Produto:</strong>
 <ol>
@@ -95,7 +95,7 @@ Por exemplo:
 <ul>
     <li><strong>GET</strong> e Endpoint <strong>/api/products/8</strong> irá Exibir o Produto que tem o ID 8</li>
 </ul>
-</br></br>
+</br>
 
 <strong>Para Atualizar um Produto:</strong>
 <ol>
@@ -114,7 +114,7 @@ Por exemplo:
     <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Atualizar</li>
     <li>Faça uma Requisição com o verbo <strong>PUT</strong> e Endpoint <strong>/api/products/{id}</strong></li>
 </ol>
-</br></br>
+</br>
 
 <strong>Para Deletar um Produto:</strong>
 <ol>
@@ -125,7 +125,7 @@ Por exemplo:
 <ul>
     <li><strong>DELETE</strong> e Endpoint <strong>/api/products/8</strong> irá Deletar o Produto que tem o ID 8</li>
 </ul>
-</br></br>
+</br>
 
 <strong>Para Testar USUÁRIOS:</strong> 
 <ol>
@@ -136,7 +136,7 @@ Por exemplo:
     <li>email</li>
     <li>password</li>
 </ul>
-</br></br>
+</br>
 
 <strong>Para Fazer LOGIN e LOGOUT:</strong>
 <ol>
