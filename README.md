@@ -53,9 +53,11 @@ Base URL = http://127.0.0.1:8000,</br>
 _______________________________________________________________________________
 No Postman:
 
+<strong>Para Exibir Todos os Produtos:</strong>
+
 → Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong>
 
-Irão aparecer 10 Produtos logo abaixo com as chaves:
+Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 <ul>
     <li>'id'</li>
     <li>'title'</li>
@@ -65,6 +67,21 @@ Irão aparecer 10 Produtos logo abaixo com as chaves:
     <li>'created_at'</li>
     <li>'updated_at'</li>
 </ul>
+
+<strong>Para Criar um Novo Produto:</strong>
+
+→ Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)
+→ Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’
+→ Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você quiser
+
+Por exemplo:
+
+title:Teste
+url:www.teste.com
+price:100.00 (Para fração não usa ',', usa '.')
+description:Meu primeiro teste
+
+→ Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
