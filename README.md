@@ -90,8 +90,8 @@ Por exemplo:
 
 <strong>Para Exibir Apenas um Produto:</strong>
 <ol>
-    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Exibir</li>
-    <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+    <li>Substitua {product}, no final do Endpoint, pelo Número do ID do Produto que você deseja Exibir</li>
+    <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{product}</strong></li>
 </ol>
     Por exemplo:
 <ul>
@@ -113,15 +113,15 @@ Por exemplo:
     <li>description: Meu primeiro teste ALTERADO</li>
 </ul>
 <ol>
-    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Atualizar</li>
-    <li>Faça uma Requisição com o verbo <strong>PUT</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+    <li>Substitua {product}, no final do Endpoint, pelo Número do ID do Produto que você deseja Atualizar</li>
+    <li>Faça uma Requisição com o verbo <strong>PUT</strong> e Endpoint <strong>/api/products/{product}</strong></li>
 </ol>
 </br>
 
 <strong>Para Deletar um Produto:</strong>
 <ol>
-    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Deletar</li>
-    <li>Faça uma Requisição com o verbo <strong>DELETE</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+    <li>Substitua {product}, no final do Endpoint, pelo Número do ID do Produto que você deseja Deletar</li>
+    <li>Faça uma Requisição com o verbo <strong>DELETE</strong> e Endpoint <strong>/api/products/{product}</strong></li>
 </ol>
     Por exemplo:
 <ul>
