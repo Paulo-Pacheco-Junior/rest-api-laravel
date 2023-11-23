@@ -84,6 +84,13 @@ Por exemplo:
 </ul>
 4. Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
 
+<strong>Para Exibir Apenas um Produto:</strong>
+
+Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja exibir
+→ Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></br>
+Por exemplo:</br>
+-> <strong>GET</strong> e Endpoint <strong>/api/products/8</strong> irá exibir o Produto que tem o ID 8</br>
+
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
     <li>Criação da Factory ProductFactory</li>
