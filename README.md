@@ -129,23 +129,33 @@ Por exemplo:
 
 <strong>Para Testar USUÁRIOS:</strong> 
 <ol>
-    <li>Use o <strong>MESMO PROCEDIMENTO</strong> que usou com <strong>PRODUTOS</strong>, porém as Chaves serão:</li>    
+    <li>Use o <strong>MESMO PROCEDIMENTO</strong> que usou em<strong>PRODUTOS</strong>, porém as Chaves serão:</li>    
 </ol>
 <ul>
     <li>name</li>
     <li>email</li>
     <li>password</li>
 </ul>
+E no Endpoint troque <strong>'products'</strong> por <strong>'users'</strong>
 </br>
 
 <strong>Para Fazer LOGIN e LOGOUT:</strong>
 <ol>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>    
+    <li>Crie um Usuário(password precisa ter no mínimo 8 dígitos)</li>
+    <li>Envie seu novo usuário via Verbo <strong>POST</strong> para o Endpoint <strong>api/auth/login</strong></li>
+    <li>Copie o Token gerado em access_token sem "aspas"</li>
+    <li>Clique em Headers</li>
+    <li>Crie a key <strong>Authorization</strong></li>
+    <li>Digite bearer no Value de Authorization</li>
+    <li>Cole o Token logo após bearer</li>
 </ol>
-
+Por exemplo:
+<ul>
+    <li><strong>Key</strong>: Authorization </li>
+    <li><strong>Value</strong>:bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDA3NDY3NDIsImV4cCI6MTcwMDc1MDM0MiwibmJmIjoxNzAwNzQ2NzQyLCJqdGkiOiJWZ1JPZ2JqTjA2eHpxSDNYIiwic3ViIjoiMTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.8UgJ-hZzinLgv_NYmHpoMvkkhR0FKl8zCCcsghT96fk
+    </li>
+</ul>
+</br>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
