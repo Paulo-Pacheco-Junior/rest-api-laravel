@@ -224,7 +224,7 @@ Por exemplo:
     Route::get('/products/{id}', [ProductController::class, 'show']);
     
 </br>
-<strong>Filtragem de Campos(fields) pela URL:</strong>
+<strong>Filtragem de Campos(fields) pela URL:</strong></br>
 <ol>
     <li>Acrescente <strong>?fields=title,url,price,description</strong> no final do Endpoint <strong>/api/products</strong></li>
     <li>Faça uma Requisição com o verbo <strong>GET</strong> e o Endpoint formado(api/products?fields=title...)</li>
