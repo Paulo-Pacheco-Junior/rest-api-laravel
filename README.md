@@ -22,11 +22,11 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
 
 <strong>Então vamos à Prática!</strong>
 <ol>
-<li> Abra o Postman e Digite a Base URL,</br>
-Base URL = http://127.0.0.1:8000,</br></li>
-<li> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</li>
-<li> Acrescente o Endpoint,</li>
-<li> Clique em Send/Enviar</br></li>
+    <li> Abra o Postman e Digite a Base URL,</br>
+        Base URL = http://127.0.0.1:8000,</br></li>
+    <li> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</li>
+    <li> Acrescente o Endpoint,</li>
+    <li> Clique em Send/Enviar</br></li>
 </ol>
 
                 'REQUISICOES DE PRODUTOS'=> [
@@ -56,7 +56,7 @@ No Postman:
 
 <strong>Para Exibir Todos os Produtos:</strong>
 <ol>
-<li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong></li>
+    <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong></li>
 </ol>
 Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 <ul>
@@ -71,28 +71,47 @@ Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 
 <strong>Para Criar um Novo Produto:</strong>
 <ol>
-<li> Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)</li>
-<li> Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’</li>
-<li> Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você quiser</li>
+    <li> Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)</li>
+    <li> Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’</li>
+    <li> Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você quiser</li>
 </ol>
 Por exemplo:
 <ul>
-<li>title: Teste</li>
-<li>url: www.teste.com</li>
-<li>price: 100.00 (Para fração use '.' e não '.')</li>
-<li>description: Meu primeiro teste</li>
+    <li>title: Teste</li>
+    <li>url: www.teste.com</li>
+    <li>price: 100.00 (Para fração use '.' e não ',')</li>
+    <li>description: Meu primeiro teste</li>
 </ul>
 4. Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
 
 <strong>Para Exibir Apenas um Produto:</strong>
 <ol>
-<li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja exibir</li>
-<li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja exibir</li>
+    <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></li>
 </ol>
     Por exemplo:
 <ul>
-<li><strong>GET</strong> e Endpoint <strong>/api/products/8</strong> irá exibir o Produto que tem o ID 8</li>
+    <li><strong>GET</strong> e Endpoint <strong>/api/products/8</strong> irá exibir o Produto que tem o ID 8</li>
 </ul>
+
+<strong>Para Atualizar um Produto:</strong>
+<ol>
+    <li> Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)</li>
+    <li> Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’</li>
+    <li> Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você deseja Atualizar</li>
+</ol>
+Por exemplo:
+<ul>
+    <li>title:Teste ALTERADO</li>
+    <li>url:www.testealterado.com</li>
+    <li>price:900.00 (Para fração não usa ',', usa '.')</li>
+    <li>description:Meu primeiro teste ALTERADO</li>
+</ul>
+<ol>
+    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Atualizar</li>
+    <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+</ol>
+
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
     <li>Criação da Factory ProductFactory</li>
