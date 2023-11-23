@@ -52,6 +52,8 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
 
 
 _______________________________________________________________________________
+<strong>Endpoints de Users, Products e Auth(login, logout...)</strong></br>
+
 No Postman:
 
 <strong>Para Exibir Todos os Produtos:</strong>
@@ -159,7 +161,7 @@ Por exemplo:
     </li>
 </ul>
 <strong>Pronto! Você está Logado! Agora pode acessar Todas as Rotas! As Protegidas e as Não Protegidas</strong>
-</br>
+</br></br>
 
 <strong>Rotas Protegidas:</strong>
 
@@ -218,21 +220,6 @@ Isso significa que quando o DatabaseSeeder for executado teremos vários Produto
 
 
 <h3>[EM DESENVOLVIMENTO! CONTINUAÇÃO EM BREVE]</h3>
-
-<strong>Rotas Protegidas:</strong>
-
-    Route::resource('/users', UserController::class);
-    Route::resource('/products', ProductController::class)->except(['show']);
-
-
-<strong>Rotas Não Protegidas:</strong>
-
-    Route::post('/users', [UserController::class, 'store']);
-
-    Route::get('/products', [ProductController::class, 'index']);
-    Route::post('/products', [ProductController::class, 'store']);
-    Route::get('/products/{id}', [ProductController::class, 'show']);
-    
 
 ## Instalação
 
