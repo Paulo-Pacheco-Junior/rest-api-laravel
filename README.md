@@ -77,10 +77,10 @@ Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 </ol>
 Por exemplo:
 <ul>
-<li>title:Teste</li>
-<li>url:www.teste.com</li>
-<li>price:100.00 (Para fração não usa '.' e não '.')</li>
-<li>description:Meu primeiro teste</li>
+<li>title: Teste</li>
+<li>url: www.teste.com</li>
+<li>price: 100.00 (Para fração use '.' e não '.')</li>
+<li>description: Meu primeiro teste</li>
 </ul>
 4. Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
 
