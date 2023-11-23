@@ -122,7 +122,10 @@ Por exemplo:
     <li><strong>DELETE</strong> e Endpoint <strong>/api/products/8</strong> irá Deletar o Produto que tem o ID 8</li>
 </ul>
 
-Para lidar com <strong>USUÁRIOS</strong> use o <strong>MESMO PROCEDIMENTO</strong> que usou com <strong>PRODUTOS</strong>, porém as Chaves serão:
+<strong>Para Testar USUÁRIOS:</strong> 
+<ol>
+    <li>Use o <strong>MESMO PROCEDIMENTO</strong> que usou com <strong>PRODUTOS</strong>, porém as Chaves serão:</li>    
+</ol>
 <ul>
     <li>name</li>
     <li>email</li>
