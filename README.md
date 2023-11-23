@@ -22,11 +22,11 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
 
 <strong>Então vamos à Prática!</strong>
 <ol>
-<li>1 -> Abra o Postman e Digite a Base URL,</br>
+<li> -> Abra o Postman e Digite a Base URL,</br>
 Base URL = http://127.0.0.1:8000,</br></li>
-<li>2 -> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</li>
-<li>3 -> Acrescente o Endpoint,</li>
-<li>4 -> Clique em Send/Enviar</br></li>
+<li> -> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</li>
+<li> -> Acrescente o Endpoint,</li>
+<li> -> Clique em Send/Enviar</br></li>
 </ol>
 
                 'REQUISICOES DE PRODUTOS'=> [
@@ -82,7 +82,7 @@ Por exemplo:
 <li>price:100.00 (Para fração não usa ',', usa '.')</li>
 <li>description:Meu primeiro teste</li>
 </ul>
-4.Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
+4. Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
