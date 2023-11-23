@@ -86,12 +86,12 @@ Por exemplo:
 
 <strong>Para Exibir Apenas um Produto:</strong>
 <ol>
-    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja exibir</li>
+    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Exibir</li>
     <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></li>
 </ol>
     Por exemplo:
 <ul>
-    <li><strong>GET</strong> e Endpoint <strong>/api/products/8</strong> irá exibir o Produto que tem o ID 8</li>
+    <li><strong>GET</strong> e Endpoint <strong>/api/products/8</strong> irá Exibir o Produto que tem o ID 8</li>
 </ul>
 
 <strong>Para Atualizar um Produto:</strong>
@@ -111,6 +111,16 @@ Por exemplo:
     <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Atualizar</li>
     <li>Faça uma Requisição com o verbo <strong>PUT</strong> e Endpoint <strong>/api/products/{id}</strong></li>
 </ol>
+
+<strong>Para Deletar um Produto:</strong>
+<ol>
+    <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Deletar</li>
+    <li>Faça uma Requisição com o verbo <strong>DELETE</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+</ol>
+    Por exemplo:
+<ul>
+    <li><strong>DELETE</strong> e Endpoint <strong>/api/products/8</strong> irá Deletar o Produto que tem o ID 8</li>
+</ul>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
