@@ -140,6 +140,8 @@ Por exemplo:
 </ol>
 </br>
 
+<strong>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth)</strong></br>
+
 <strong>Para Fazer LOGIN e LOGOUT:</strong>
 <ol>
     <li>Crie um Usuário(password precisa ter no mínimo 8 dígitos)</li>
@@ -156,7 +158,26 @@ Por exemplo:
     <li><strong>Value</strong>:bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDA3NDY3NDIsImV4cCI6MTcwMDc1MDM0MiwibmJmIjoxNzAwNzQ2NzQyLCJqdGkiOiJWZ1JPZ2JqTjA2eHpxSDNYIiwic3ViIjoiMTciLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.8UgJ-hZzinLgv_NYmHpoMvkkhR0FKl8zCCcsghT96fk
     </li>
 </ul>
+<strong>Pronto! Você está Logado! Agora pode acessar Todas as Rotas! As Protegidas e as Não Protegidas</strong>
 </br>
+
+<strong>Rotas Protegidas:</strong>
+
+    Route::resource('/users', UserController::class);
+    Route::resource('/products', ProductController::class)->except(['show']);
+
+
+<strong>Rotas Não Protegidas:</strong>
+
+    Route::post('/users', [UserController::class, 'store']);
+
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::post('/products', [ProductController::class, 'store']);
+    Route::get('/products/{id}', [ProductController::class, 'show']);
+    
+
+
+<strong>Database Seeding</strong></br>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
