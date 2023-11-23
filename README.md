@@ -55,9 +55,9 @@ _______________________________________________________________________________
 No Postman:
 
 <strong>Para Exibir Todos os Produtos:</strong>
-
-→ Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong>
-
+<ol>
+<li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products</strong></li>
+</ol>
 Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 <ul>
     <li>'id'</li>
@@ -79,7 +79,7 @@ Por exemplo:
 <ul>
 <li>title:Teste</li>
 <li>url:www.teste.com</li>
-<li>price:100.00 (Para fração não usa ',', usa '.')</li>
+<li>price:100.00 (Para fração não usa '.' e não '.')</li>
 <li>description:Meu primeiro teste</li>
 </ul>
 4. Faça uma Requisição com o verbo <strong>POST</strong> e Endpoint <strong>/api/products</strong></br></br>
