@@ -73,7 +73,7 @@ Irão aparecer 10 Produtos, logo abaixo, com seus valores e as chaves:
 <ol>
     <li> Abra uma nova aba HTTP(‘File’, depois ‘New…’ e depois ‘HTTP’)</li>
     <li> Clique em ‘Body’ e em seguida ‘x-www-form-urlencoded’</li>
-    <li> Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você quiser</li>
+    <li> Preencha as Keys(chaves) (‘title’,’url’,’price’,’description’) e os Values(valores) que você deseja Criar</li>
 </ol>
 Por exemplo:
 <ul>
@@ -102,14 +102,14 @@ Por exemplo:
 </ol>
 Por exemplo:
 <ul>
-    <li>title:Teste ALTERADO</li>
-    <li>url:www.testealterado.com</li>
-    <li>price:900.00 (Para fração não usa ',', usa '.')</li>
-    <li>description:Meu primeiro teste ALTERADO</li>
+    <li>title: Teste ALTERADO</li>
+    <li>url: www.testealterado.com</li>
+    <li>price: 900.00 (Para fração não usa ',', usa '.')</li>
+    <li>description: Meu primeiro teste ALTERADO</li>
 </ul>
 <ol>
     <li>Substitua {id}, no final do Endpoint, pelo Número do ID do Produto que você deseja Atualizar</li>
-    <li>Faça uma Requisição com o verbo <strong>GET</strong> e Endpoint <strong>/api/products/{id}</strong></li>
+    <li>Faça uma Requisição com o verbo <strong>PUT</strong> e Endpoint <strong>/api/products/{id}</strong></li>
 </ol>
 
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
