@@ -129,16 +129,14 @@ Por exemplo:
 
 <strong>Para Testar USUÁRIOS:</strong> 
 <ol>
-    <li>Use o <strong>MESMO PROCEDIMENTO</strong> que usou em <strong>PRODUTOS</strong>, porém as Chaves serão:</li>    
-</ol>
-<ul>
-    <li>name</li>
-    <li>email</li>
-    <li>password</li>
-</ul>
-<ol>
-    <li></li>
     <li>No Endpoint troque <strong>'products'</strong> por <strong>'users'</strong></li>
+    <li>Use o <strong>MESMO PROCEDIMENTO</strong> que usou em <strong>PRODUTOS</strong>, porém as Chaves serão:</br>    
+        <ul>
+            <li>name</li>
+            <li>email</li>
+            <li>password</li>
+        </ul>
+    </li>
 </ol>
 </br>
 
@@ -149,8 +147,8 @@ Por exemplo:
     <li>Copie o <strong>Token</strong> gerado em <strong>access_token</strong> sem "aspas"</li>
     <li>Clique em Headers</li>
     <li>Crie a key <strong>Authorization</strong></li>
-    <li>Digite bearer no <strong>Value</strong> de <strong>Authorization</strong></li>
-    <li>Cole o Token logo após bearer</li>
+    <li>Digite <strong>bearer</strong> no <strong>Value</strong> de <strong>Authorization</strong></li>
+    <li>Cole o <strong>Token</strong> logo após <strong>bearer</strong></li>
 </ol>
 Por exemplo:
 <ul>
