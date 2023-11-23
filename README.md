@@ -122,6 +122,22 @@ Por exemplo:
     <li><strong>DELETE</strong> e Endpoint <strong>/api/products/8</strong> irá Deletar o Produto que tem o ID 8</li>
 </ul>
 
+Para lidar com <strong>USUÁRIOS</strong> use o <strong>MESMO PROCEDIMENTO</strong> que usou com <strong>PRODUTOS</strong>, porém as Chaves serão:
+<ul>
+    <li>name</li>
+    <li>email</li>
+    <li>password</li>
+</ul>
+
+<strong>Para Fazer LOGIN e LOGOUT:</strong>
+<ol>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>    
+</ol>
+
+
 Estes Produtos foram <strong>Populados em Massa</strong> através da: 
 <ul>
     <li>Criação da Factory ProductFactory</li>
