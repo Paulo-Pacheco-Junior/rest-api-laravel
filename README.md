@@ -78,16 +78,16 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
                 'REQUISICOES DE PRODUTOS'=> [
                     ['Exibir Todos os Produtos' => ['Verbo: GET', 'Endpoint: /api/products']],
                     ['Criar um Novo Produto' => ['Verbo: POST', 'Endpoint: /api/products']],
-                    ['Exibir Apenas um Produto' => ['Verbo: GET', 'Endpoint: /api/products/{id}']],
-                    ['Atualizar um Produto' => ['Verbo: PUT', 'Endpoint: /api/products/{id}']],
-                    ['Deletar um Produto' => ['Verbo: DELETE', 'Endpoint: /api/products/{id}']]
+                    ['Exibir Apenas um Produto' => ['Verbo: GET', 'Endpoint: /api/products/{product}']],
+                    ['Atualizar um Produto' => ['Verbo: PUT', 'Endpoint: /api/products/{product}']],
+                    ['Deletar um Produto' => ['Verbo: DELETE', 'Endpoint: /api/products/{product}']]
                 ],
                 'REQUISICOES DE USUARIOS'=> [
                     ['Exibir Todos os Usuários' => ['Verbo: GET', 'Endpoint: /api/users']],
                     ['Criar um Novo Usuário' => ['Verbo: POST', 'Endpoint: /api/users']],
-                    ['Exibir Apenas um Usuário' => ['Verbo: GET', 'Endpoint: /api/users/{id}']],
-                    ['Atualizar um Usuário' => ['Verbo: PUT', 'Endpoint: /api/users/{id}']],
-                    ['Deletar um Usuário' => ['Verbo: DELETE', 'Endpoint: /api/users/{id}']]
+                    ['Exibir Apenas um Usuário' => ['Verbo: GET', 'Endpoint: /api/users/{user}']],
+                    ['Atualizar um Usuário' => ['Verbo: PUT', 'Endpoint: /api/users/{user}']],
+                    ['Deletar um Usuário' => ['Verbo: DELETE', 'Endpoint: /api/users/{user}']]
                 ],
                 'REQUISICOES DE AUTENTICACAO'=> [
                     ['Entrar na conta do Usuário' => ['Verbo: POST', 'Endpoint: /api/auth/login']],
