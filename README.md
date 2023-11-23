@@ -22,11 +22,11 @@ Agora que deixei claro que não desconheço os termos técnicos. Para simplifica
 
 <strong>Então vamos à Prática!</strong>
 <ol>
-<li> -> Abra o Postman e Digite a Base URL,</br>
+<li> Abra o Postman e Digite a Base URL,</br>
 Base URL = http://127.0.0.1:8000,</br></li>
-<li> -> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</li>
-<li> -> Acrescente o Endpoint,</li>
-<li> -> Clique em Send/Enviar</br></li>
+<li> Selecione o Verbo/Método(GET,POST,PUT,DELETE),</li>
+<li> Acrescente o Endpoint,</li>
+<li> Clique em Send/Enviar</br></li>
 </ol>
 
                 'REQUISICOES DE PRODUTOS'=> [
