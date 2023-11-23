@@ -223,7 +223,13 @@ Por exemplo:
     Route::post('/products', [ProductController::class, 'store']);
     Route::get('/products/{id}', [ProductController::class, 'show']);
     
-
+<strong>Filtragem de Campos(fields) pela URL:</strong>
+<ol>
+    <li>Acrescente <strong>?fields=title,url,price,description</strong> no final do Endpoint <strong>/api/products</strong></li>
+    <li>Faça uma Requisição com o verbo <strong>GET</strong> e o Endpoint acima</li>
+    <li>Retire o atributo que você não deseja exibir. Só serão exibidos os listados em <strong>fields</strong></li>
+</ol>
+</br>
 
 <strong>Database Seeding</strong></br>
 
