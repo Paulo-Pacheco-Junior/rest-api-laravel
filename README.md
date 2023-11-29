@@ -25,8 +25,8 @@ Uma vez clonado, abra na pasta do projeto:
 cd «DIR DO PROJETO»
 ```
 
-Dentro da pasta do projeto, crie o arquivo *.env* e copie o arquivo *.env.example* para *.env*.
-Agora, modifique o .env inserindo as credenciais do seu banco de dados.
+Dentro da pasta do projeto, crie o arquivo *.env* e copie o arquivo *.env.example* para o *.env*.
+Agora, modifique o *.env* inserindo as credenciais do seu banco de dados.
 
 ```
 DB_CONNECTION=mysql
