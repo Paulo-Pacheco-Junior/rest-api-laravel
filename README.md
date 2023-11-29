@@ -42,9 +42,9 @@ Por exemplo:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=beerandcode
-DB_USERNAME=dba
-DB_PASSWORD=senha1234
+DB_DATABASE=laravel_crud
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
 Agora, instale o projeto:
