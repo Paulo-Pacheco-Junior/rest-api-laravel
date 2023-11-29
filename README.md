@@ -26,7 +26,7 @@ cd «DIR DO PROJETO»
 ```
 
 Dentro da pasta do projeto, copie o arquivo *.env.example* para *.env*.
-Agora, modifique o .env insirindo insira as credenciais do seu banco de dados.
+Agora, modifique o .env inserindo as credenciais do seu banco de dados.
 
 ```
 DB_CONNECTION=mysql
