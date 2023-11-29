@@ -7,28 +7,36 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 
+
 class UserController extends Controller
 {
+    
+    private $user;
+
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+
+    }
+    
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request) {
+    public function index()
+    {
+        $users = $this->user->query();
 
-        $users = User::query();
-
-        return response()->json($users->paginate(10)); 
+        return response()->json($users->paginate(10));
         
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(UserRequest $request) {
-
-        $data = $request->all();
-
-        $user = new User;
-        $user->fill($data);
+    public function store(UserRequest $request)
+    {
+        $data = $request->only(['name','email','password']);
+        $user = $this->user->fill($data);
         $user->save();
 
         return response()->json([
@@ -41,10 +49,8 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id) {
-        
-        $user = User::find($id);
-
+    public function show(User $user)
+    {
         return response()->json($user);
 
     }
@@ -52,41 +58,31 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UserRequest $request, $id) {
-
+    public function update(UserRequest $request, User $user)
+    {
         $data = $request->only(['name','email','password']);
 
-        $user = User::find($id);
-
-        if(!$user) {
-            return response()->json(['error' => 'Usuário não encontrado'], 404);
-        }
-        
         $user->update($data);
-
+        
         return response()->json([
             'msg' => 'Usuário alterado com sucesso',
             'data' => $user
         ]);
 
-    } 
+    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id) {
+    public function destroy(User $user)
+    {
+        $user->delete();
 
-        $user = User::find($id);
- 
-         if(!$user) {
-             return response()->json(['error' => 'Usuário não encontrado'], 404);
-         };
- 
-         $user->delete();
- 
-         return response()->json(
-             ['msg' => 'Usuário removido com sucesso!']
-         );
- 
-     }
+        return response()->json([
+            'msg' => 'Usuário removido com sucesso',
+            'data' => $user
+        ]);
+
+    }
+    
 }

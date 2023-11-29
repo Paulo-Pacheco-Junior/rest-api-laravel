@@ -42,16 +42,16 @@ Route::get('/', ApiHttpGuideController::class);
 
 Route::middleware('auth:api')->group(function () {
     // Rotas protegidas
-    Route::resource('/users', UserController::class);
-    Route::resource('/products', ProductController::class)->except(['show']);
+    Route::apiResource('/users', UserController::class);
+    Route::apiResource('/products', ProductController::class)->except(['show']);
 });
 
-// Rotas não protegidas
+//Rotas não protegidas
 Route::post('/users', [UserController::class, 'store']);
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/products', [ProductController::class, 'store']);
-Route::get('/products/{id}', [ProductController::class, 'show']);
+Route::get('/products/{product}', [ProductController::class, 'show']);
 
 
 
