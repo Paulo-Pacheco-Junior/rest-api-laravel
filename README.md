@@ -5,6 +5,7 @@
 <ul>
     <li>Database seeding</li>
     <li>Endpoints de Users, Products e Auth(login, logout...)</li>
+    <li>Tratamento de dados com Resources</li>
     <li>Validação FormRequest,</li>
     <li>Filtragem de Campos(fields) pela URL,</li>
     <li>Autenticação e Autorização JWT (utilizando o pacote tymon/jwt-auth),</li>
