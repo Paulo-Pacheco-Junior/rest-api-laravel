@@ -53,7 +53,7 @@ Agora, instale o projeto:
 composer install
 php artisan key:generate
 php artisan jwt:secret
-php artisan migrate:fresh --seed
+php artisan migrate --seed
 php artisan serve
 ```
 </br>
