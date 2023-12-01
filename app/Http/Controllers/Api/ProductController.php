@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
+use App\Http\Resources\ProductResource;
+use App\Http\Resources\ProductCollection;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -31,7 +33,7 @@ class ProductController extends Controller
             $products->selectRaw($fields);
         }
 
-        return response()->json($products->paginate(10));
+        return new ProductCollection($products->paginate(10));
 
     }
 
@@ -44,10 +46,7 @@ class ProductController extends Controller
         $product = $this->product->fill($data);
         $product->save();
 
-        return response()->json([
-            'msg' => 'Produto cadastrado com sucesso',
-            'data' => $product
-        ]);
+        return new ProductResource($product);
 
     }
 
@@ -56,7 +55,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return response()->json($product);
+        return new ProductResource($product);
 
     }
 
@@ -66,14 +65,10 @@ class ProductController extends Controller
     public function update(ProductRequest $request, Product $product)
     {
         $data = $request->only(['title','url','price','description']);
-        $product = $this->product->find($product->id);
 
         $product->update($data);
-        
-        return response()->json([
-            'msg' => 'Produto atualizado com sucesso',
-            'data' => $product
-        ]);
+
+        return new ProductResource($product);
 
     }
 
@@ -83,10 +78,8 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-
-        return response()->json(
-            ['msg' => 'Produto removido com sucesso!']
-        );
-
+        
+        return new ProductResource($product);
+    
     }
 }

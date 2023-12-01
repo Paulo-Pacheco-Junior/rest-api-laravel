@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Http\Resources\UserResource;
+use App\Http\Resources\UserCollection;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -26,7 +28,7 @@ class UserController extends Controller
     {
         $users = $this->user->query();
 
-        return response()->json($users->paginate(10));
+        return new UserCollection($users->paginate(10));
         
     }
 
@@ -39,10 +41,7 @@ class UserController extends Controller
         $user = $this->user->fill($data);
         $user->save();
 
-        return response()->json([
-            'msg' => 'Usuário cadastrado com sucesso',
-            'data' => $user
-        ]);
+        return new UserResource($user);
 
     }
 
@@ -51,23 +50,21 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return response()->json($user);
+        return new UserResource($user);
 
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UserRequest $request, User $user)
+    public function update(UserRequest $request, $id)
     {
+        $user = $this->user->find($id);
         $data = $request->only(['name','email','password']);
 
         $user->update($data);
-        
-        return response()->json([
-            'msg' => 'Usuário alterado com sucesso',
-            'data' => $user
-        ]);
+
+        return new UserResource($user);
 
     }
 
@@ -78,10 +75,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return response()->json([
-            'msg' => 'Usuário removido com sucesso',
-            'data' => $user
-        ]);
+        return new UserResource($user);
 
     }
     
