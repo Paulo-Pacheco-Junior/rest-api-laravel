@@ -33,7 +33,7 @@ class ProductController extends Controller
             $products->selectRaw($fields);
         }
 
-        return new ProductCollection($products->paginate(10));
+        return new ProductCollection($products->paginate(20));
 
     }
 
